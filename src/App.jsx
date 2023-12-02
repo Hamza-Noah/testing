@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CoreConcepts from "./Core-Concept";
-import Header from "./Header";
+import CoreConcepts from "./components/Core-Concept/index.jsx";
+import Header from "./components/Header/index.jsx";
 // import ComponentImg from "./assets/components.png";
 import { CORE_CONCEPTS } from "./data.js";
 
@@ -29,31 +29,9 @@ function App() {
         <section id="core-concepts">
           <h2>Core Concpets</h2>
           <ul>
-            <CoreConcepts
-              {...CORE_CONCEPTS[0]}
-              
-            />
-            <CoreConcepts
-              title="components"
-              description="The Core UI Building Block"
-              {...CORE_CONCEPTS[1]}
-
-              
-            />
-            <CoreConcepts
-              title="components"
-              description="The Core UI Building Block"
-              {...CORE_CONCEPTS[2]}
-
-              
-            />
-            <CoreConcepts
-              title="components"
-              description="The Core UI Building Block"
-              {...CORE_CONCEPTS[3]}
-
-              
-            />
+            {CORE_CONCEPTS.map((core_concept) => {
+              return <CoreConcepts {...core_concept} />;
+            })}
           </ul>
         </section>
       </main>

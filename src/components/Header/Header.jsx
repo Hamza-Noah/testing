@@ -1,4 +1,4 @@
-import reactImg from "../assets/react-core-concepts.png";
+import reactImg from "../../assets/react-core-concepts.png";
 
 function Header() {
   const reactDescriptions = ["Fundamental", "Crucial", "Core"];
